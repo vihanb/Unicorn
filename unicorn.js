@@ -5,3 +5,9 @@ function Unicorn(code){
   }).join("");
   return eval(chars);
 }
+
+function GenerateUnicorn(JavaScriptCode) {
+return JavaScriptCode.split``.map(function(l){
+	return l.charCodeAt()%4?"🦄".repeat(l.charCodeAt()):"🐐".repeat(l.charCodeAt()/4)
+}).join` `;
+}
