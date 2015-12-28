@@ -1,4 +1,5 @@
 function Unicorn(code) {
+  if (!/[🦄]/.test(code)) return alert("Error: No unicorns!");
   if (code.indexOf("!") || code.indexOf('"')) code = RemoveEncoding(code);
   var chars = code.split(" ").map(function(ch) {
     var emoji = ch.match(/([\uD800-\uDBFF][\uDC00-\uDFFF])/g)[0];
