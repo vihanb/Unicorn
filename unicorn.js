@@ -8,7 +8,6 @@ function Unicorn(code) {
 
 function GenerateUnicorn(JavaScriptCode) {
   return JavaScriptCode.split``.map(function(l) {
-    return /[\d\(\)\[\]]/.test(l) ? l : l.charCodeAt() % 6 === 0 ? "✨".repeat(l.charCodeAt() / 6) : l.charCodeAt() % 4 === 0 ? "🌈".repeat(l.charCodeAt()/4) : l.charCodeAt() % 3 === 0 ? "🌤".repeat(l.charCodeAt() / 3) : l.charCodeAt() % 2 ? "🦄".repeat(l.charCodeAt() / 2) : "🐐".repeat(l.charCodeAt()) 
+    return /[\d\(\)\[\]]/.test(l) ? l : l.charCodeAt() % 6 === 0 ? "✨".repeat(l.charCodeAt() / 6) : l.charCodeAt() % 4 === 0 ? "🌈".repeat(l.charCodeAt()/4) : l.charCodeAt() % 3 === 0 ? "🌤".repeat(l.charCodeAt() / 3) : l.charCodeAt() % 2 ? "🐐".repeat(l.charCodeAt() / 2) : "🦄".repeat(l.charCodeAt()) 
   }).join ` `;
 }
-
