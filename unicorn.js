@@ -1,6 +1,6 @@
 function Unicorn(code) {
   var chars = code.split(" ").map(function(ch) {
-    var emoji = ch.match(/🌤|🌈|✨|🦄|🐐/g)[0];
+    var emoji = (ch.match(/🌤|🌈|✨|🦄|🐐/g)||[])[0];
     return /[\d\(\)\[\]]/.test(ch) ? ch : ch.charCodeAt() < 5000 ? "" : emoji === "✨" ? String.fromCharCode(ch.length * 3) : emoji === "🌈" ? String.fromCharCode(ch.length * 2) : emoji === "🌤" ? String.fromCharCode((ch.length / 2) * 3) : emoji === "🦄" ? String.fromCharCode(ch.length / 2) : emoji === "🐐" ? String.fromCharCode(ch.length) : "" 
   }).join("");
   return chars;
